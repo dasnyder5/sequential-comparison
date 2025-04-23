@@ -113,10 +113,24 @@
             <div class="col-md-12 col-lg-10">
                 <br><br>
                 <h3>
+                    Problem formulation
+                </h3>
+                <p class="text-justify">
+                    We consider the problem of policy comparison for two robot policies using binary success/failure evaluation metrics. We formulate the problem as a canonical statistical testing procedure, corresponding to null (red) and alternative (blue) hypotheses as shown below:
+                    <br><p style="text-align:center;">
+                        <image src="img/testing_problem.png" width="50%">
+                    </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <br><br>
+                <h3>
                     Approach overview
                 </h3>
                 <p class="text-justify">
-                    STEP constructs an optimization-based procedure to approximately solve an optimal-stopping partial differential equation with a finite-sample-exact representation at the resolution of the testing problem. Standard methods solve the asymptotic solution of a reverse heat equation, and are inefficient and sometimes ill-posed at small-to-moderate N. 
+                    STEP utilizes an optimization-based procedure to approximately solve an optimal-stopping partial differential equation with a finite-sample-exact representation at the resolution of the testing problem. Standard methods solve the asymptotic solution of a reverse heat equation, and are inefficient and sometimes ill-posed at small-to-moderate N. 
                     <br><p style="text-align:center;">
                         <image src="img/policy_synthesis.png" width="50%">
                     </p>
@@ -131,17 +145,35 @@
                 </h3>
                 <p class="text-justify">
                     <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
-                    DPPO yields consistent and marked improvements in training stability and final performance compared to other diffusion-based RL algorithms and common policy parameterizations such as Gaussian and Gaussian Mixture. Most remarkably, DPPO achieves robust <strong>zero-shot sim-to-real transfer</strong> (no usage of real data) in a state-based, long-horizon assembly task, while Gaussian policy shows a significant sim-to-real gap and consistently causes hardware error.
-                    <div class="row mt-4">
+                    In the following, we exhaustively evaluate STEP and baseline methods in a variety of conditions. 45 pairs (p0, p1) are selected at intervals of 0.1, with offset of 0.05 (e.g.: (0.05, 0.15), (0.05, 0.25), ..., (0.85, 0.95)). For each of these pairs, 5000 evaluation sequences are drawn from the associated Bernoulli distribution to evaluate power, and 5000 sequences are drawn to evaluate FPR on the associated worst-case null hypothesis pair.  
+                    <br>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    STEP demonstrates near-optimal statistical power across a range of sample complexity scales (order ~5 -- 500), corresponding to comparison instances of varying difficulty. In so doing, it Pareto dominates existing methods in the finite-sample regime (e.g., for evaluation trial counts less than ~1000), as shown in the following plot: 
+                    <!-- <div class="row mt-4">
                         <div class="col-md-12 text-center">
                             <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
                                 <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
                             </video>
                         </div>
-                    </div>
+                    </div> -->
                     <br>
                     <p style="text-align:center;">
-                        <image src="img/hardware-eval.png" width="75%">
+                        <image src="img/Power_img.png" width="75%">
+                    </p>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    Additionally, STEP explicitly controls the false positive rate (Type-I Error rate) uniformly across the space of worst-case null hypotheses, which ensures maximal efficiency in the `spending' of risk. This is shown in the uniformly light blue shade of the FPR plot, below.
+                    <!-- <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div> -->
+                    <br>
+                    <p style="text-align:center;">
+                        <image src="img/FPR_img.png" width="75%">
                     </p>
             </div>
         </div>
