@@ -104,7 +104,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-12 text-center">
                 <video id="v0" width="75%" preload="metadata" playsinline muted loop autoplay>
-                    <source src="videos/dppo-banner-v2.mp4" type="video/mp4">
+                    <source src="videos/Anchor_Slides_video.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -116,9 +116,9 @@
                     Approach overview
                 </h3>
                 <p class="text-justify">
-                    DPPO introduces a <strong>two-layer Diffusion Policy MDP</strong> with the inner MDP representing the denoising process and the outer MDP representing the environment --- each step of the entire MDP involves Gaussian likelihood and thus can be optimized with policy gradient. DPPO builds upon Proximal Policy Optimization (PPO) and proposes a set of best practices including <strong>modifications to the denoising schedule</strong> to ensure fine-tuning efficiency and stability.
+                    STEP constructs an optimization-based procedure to approximately solve an optimal-stopping partial differential equation with a finite-sample-exact representation at the resolution of the testing problem. Standard methods solve the asymptotic solution of a reverse heat equation, and are inefficient and sometimes ill-posed at small-to-moderate N. 
                     <br><p style="text-align:center;">
-                        <image src="img/mdp.png" width="100%">
+                        <image src="img/policy_synthesis.png" width="100%">
                     </p>
             </div>
         </div>
@@ -282,12 +282,12 @@
                 </h3>
                 <div class="form-group col-md-12">
                     <textarea id="bibtex" class="form-control" rows="7" readonly>
-                        @inproceedings{step2025,
-                            title = {Is {Your} {Imitation} {Learning} {Policy} {Better} than {Mine}? {Policy} {Comparison} with {Near}-{Optimal} {Stopping}},
-                            author = {Snyder, David and Hancock, Asher James and Badithela, Apurva and Dixon, Emma and Miller, Patrick and Ambrus, Rares Andrei and Majumdar, Anirudha and Itkina, Masha and Nishimura, Haruki},
-                            booktitle={arXiv preprint arXiv:2503.10966}
-                            year = {2025},
-                    }   </textarea>
+    @inproceedings{step2025,
+        title = {Is {Your} {Imitation} {Learning} {Policy} {Better} than {Mine}? {Policy} {Comparison} with {Near}-{Optimal} {Stopping}},
+        author = {Snyder, David and Hancock, Asher James and Badithela, Apurva and Dixon, Emma and Miller, Patrick and Ambrus, Rares Andrei and Majumdar, Anirudha and Itkina, Masha and Nishimura, Haruki},
+        booktitle={arXiv preprint arXiv:2503.10966}
+        year = {2025},
+}   </textarea>
                 </div>
             </div>
         </div>
