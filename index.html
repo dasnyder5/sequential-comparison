@@ -131,9 +131,16 @@
                 </h3>
                 <p class="text-justify">
                     STEP utilizes an optimization-based procedure to approximately solve an optimal-stopping partial differential equation with a finite-sample-exact representation at the resolution of the testing problem. Standard methods solve the asymptotic solution of a reverse heat equation, and are inefficient and sometimes ill-posed at small-to-moderate N. 
-                    <br><p style="text-align:center;">
+                    <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/policy_synthesis.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <!-- <br><p style="text-align:center;">
                         <image src="img/policy_synthesis.png" width="50%">
-                    </p>
+                    </p> -->
             </div>
         </div>
 
@@ -141,7 +148,7 @@
             <div class="col-md-12 col-lg-10">
                 <br><br>
                 <h3>
-                    Performance evaluation
+                    Performance evaluation on simulated data
                 </h3>
                 <p class="text-justify">
                     <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
@@ -180,6 +187,33 @@
 
         <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
+                <br><br>
+                <h3>
+                    Performance evaluation on hardware rollouts
+                </h3>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    In the following, we evaluate STEP and baseline methods in a variety of <strong>real hardware evaluation sequences</strong>. 
+                    <br>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    All sequential methods demonstrate efficient reduction in required evaluation trials for easy (large-gap) comparison settings (<strong>FoldRedTowel</strong>, <strong>CleanUpSpill</strong>). For smaller gaps, we demonstrate that STEP performs significantly better, especially in the low-variance regime corresponding to the lower-left and upper-right corners of the preceding plots of statistical power (<strong>StackCube</strong>). We also show that for small gaps, <i>significantly more trials than are standard in the robotics literature </i>are required to reliably compare policy performance (<strong>CarrotOnPlate</strong>, <strong>EggplantInBasket</strong>)
+                    <!-- <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div> -->
+                    <br>
+                    <p style="text-align:center;">
+                        <image src="img/Results_Table.png" width="75%">
+                    </p>
+            </div>
+        </div>
+
+        <!-- <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
                 <br>
                 <p class="text-justify">
                     BC-only policy tends to exhibit haphazard behavior, e.g., not ensuring the peg is properly inserted before loosening the grip. DPPO policy, after RL fine-tuning, exhibits more <strong>robust</strong> insertion behavior.
@@ -192,9 +226,9 @@
                     </div>
                     <br>
             </div>
-        </div>
+        </div> -->
 
-        <div class="row justify-content-md-center">
+        <!-- <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
                 <br>
                 <p class="text-justify">
@@ -208,7 +242,7 @@
                     </div>
                     <br>
             </div>
-        </div>
+        </div> -->
 
         <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
