@@ -118,7 +118,7 @@
                 <p class="text-justify">
                     We consider the problem of policy comparison for two robot policies using binary success/failure evaluation metrics. We formulate the problem as a canonical statistical testing procedure, corresponding to null (red) and alternative (blue) hypotheses as shown below:
                     <br><p style="text-align:center;">
-                        <image src="img/testing_problem.png" width="50%">
+                        <image src="img/testing_problem.png" width="75%">
                     </p>
             </div>
         </div>
@@ -133,7 +133,7 @@
                     STEP utilizes an optimization-based procedure to approximately solve an optimal-stopping partial differential equation with a finite-sample-exact representation at the resolution of the testing problem. Standard methods solve the asymptotic solution of a reverse heat equation, and are inefficient and sometimes ill-posed at small-to-moderate N. 
                     <div class="row mt-4">
                         <div class="col-md-12 text-center">
-                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                            <video id="v0" width="75%" preload="metadata" playsinline muted loop autoplay>
                                 <source src="videos/policy_synthesis.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -197,14 +197,7 @@
                     <br>
                 <p class="text-justify">
                     <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
-                    All sequential methods demonstrate efficient reduction in required evaluation trials for easy (large-gap) comparison settings (<strong>FoldRedTowel</strong>, <strong>CleanUpSpill</strong>). For smaller gaps, we demonstrate that STEP performs significantly better, especially in the low-variance regime corresponding to the lower-left and upper-right corners of the preceding plots of statistical power (<strong>StackCube</strong>). We also show that for small gaps, <i>significantly more trials than are standard in the robotics literature </i>are required to reliably compare policy performance (<strong>CarrotOnPlate</strong>, <strong>EggplantInBasket</strong>)
-                    <!-- <div class="row mt-4">
-                        <div class="col-md-12 text-center">
-                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
-                                <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div> -->
+                    All sequential methods demonstrate efficient reduction in required evaluation trials for easy (large-gap) comparison settings (<strong>FoldRedTowel</strong>, <strong>CleanUpSpill</strong>). For smaller gaps, we demonstrate that STEP performs significantly better, especially in the low-variance regime corresponding to the lower-left and upper-right corners of the preceding plots of statistical power (<strong>StackCube</strong>). We also show that for small gaps, <i>significantly more trials than are standard in the robotics literature </i>are required to reliably compare policy performance (<strong>CarrotOnPlate</strong>, <strong>EggplantInBasket</strong>):
                     <br>
                     <p style="text-align:center;">
                         <image src="img/Results_Table.png" width="75%">
