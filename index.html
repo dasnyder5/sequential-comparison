@@ -241,30 +241,30 @@
             <div class="col-md-12 col-lg-10">
                 <br>
                 <p class="text-justify">
-                    DPPO solves the more challenging <em>Square</em> and <em>Transport</em> tasks from <a href="//robomimic.github.io/docs/introduction/overview.html">robomimic</a> to <strong>>90% success rates</strong> using either <strong>state or pixel input</strong> and <strong>sparse reward</strong>. To our knowledge, DPPO is <strong>the first RL algorithm</strong> to solve <em>Transport</em> to >50% success rates. The final behavior is robust and smooth without using any regularization or reward shaping in training.
+                    On the left, we illustrate the interpretation of the preceding Table which shows that STEP is robust to conservative specification of N_max, the largest number of per-policy evaluations that the evaluator is willing to run (to find a significant difference). On the right, we illustrate how STEP intrinsically adapts to the difficulty of the comparison problem, which the evaluator cannot know <i>a priori</i>:
                     <div class="row mt-4">
                         <div class="col-md-6 text-center">
                             <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
-                                <source src="videos/dppo-square-sim-v3.mp4" type="video/mp4">
+                                <source src="videos/Robust_to_Nmax_Trimmed.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="col-md-6 text-center">
                             <video id="v1" width="100%" preload="metadata" playsinline muted loop autoplay>
-                                <source src="videos/dppo-transport-sim-v3.mp4" type="video/mp4">
+                                <source src="videos/Adaptation_to_Problem_Difficulty_Trimmed.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
             </div>
         </div>
 
-        <div class="row justify-content-md-center">
+        <!-- <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
                 <br><br>
                 <p class="text-justify">
                     In three multi-stage assembly tasks from <a href="//clvrai.github.io/furniture-bench/">Furniture-Bench</a>, <em>One-leg</em>, <em>Lamp</em>, and <em>Round-table</em>, DPPO improves the success rate of pre-trained policies from <strong>57% to 97%</strong>, <strong>12% to 87%</strong>, and <strong>1% to 86%</strong>, respectively, learning from only <strong>sparse reward</strong>.
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <div class="full-width-video-container">
             <div class="row mt-4 justify-content-center">
