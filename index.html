@@ -104,7 +104,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-12 text-center">
                 <video id="v0" width="75%" preload="metadata" playsinline muted loop autoplay>
-                    <source src="videos/Anchor_Video_Border_Trimmed_Braked.mp4" type="video/mp4">
+                    <source src="videos/Anchor_Video_Border_Trimmed_Braked_v4.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -118,7 +118,7 @@
                 <p class="text-justify">
                     We consider the problem of policy comparison for two robot policies using binary success/failure evaluation metrics. We formulate the problem as a canonical statistical testing procedure, corresponding to null (red) and alternative (blue) hypotheses as shown below:
                     <br><p style="text-align:center;">
-                        <image src="img/testing_problem.png" width="75%">
+                        <image src="img/testing_problem.png" width="65%">
                     </p>
             </div>
         </div>
@@ -166,7 +166,7 @@
                     </div> -->
                     <br>
                     <p style="text-align:center;">
-                        <image src="img/Power_img.png" width="75%">
+                        <image src="img/Power_img.png" width="95%">
                     </p>
                 <p class="text-justify">
                     <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
@@ -180,7 +180,7 @@
                     </div> -->
                     <br>
                     <p style="text-align:center;">
-                        <image src="img/FPR_img.png" width="75%">
+                        <image src="img/FPR_img.png" width="95%">
                     </p>
             </div>
         </div>
@@ -200,7 +200,7 @@
                     All sequential methods demonstrate efficient reduction in required evaluation trials for easy (large-gap) comparison settings (<strong>FoldRedTowel</strong>, <strong>CleanUpSpill</strong>). For smaller gaps, we demonstrate that STEP performs significantly better, especially in the low-variance regime corresponding to the lower-left and upper-right corners of the preceding plots of statistical power (<strong>StackCube</strong>). We also show that for small gaps, <i>significantly more trials than are standard in the robotics literature </i>are required to reliably compare policy performance (<strong>CarrotOnPlate</strong>, <strong>EggplantInBasket</strong>):
                     <br>
                     <p style="text-align:center;">
-                        <image src="img/Results_Table.png" width="75%">
+                        <image src="img/Results_Table.png" width="95%">
                     </p>
             </div>
         </div>
@@ -236,8 +236,56 @@
                     <br>
             </div>
         </div> -->
-
         <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <br><br>
+                <h3>
+                    Additional STEP properties
+                </h3>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    We discuss several properties of STEP evaluation with strong practical benefits to the user. 
+                    <br>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    STEP demonstrates significant robustness to the choice of n_max, allowing the user to conservatively allocate significant evaluation capacity <i>without requiring many additional trials in easy cases</i>. This is significantly more efficient than having to pre-select an exact batch size!
+                    <!-- <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div> -->
+                    <br>
+                    <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="75%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/Robust_to_Nmax_Trimmed.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                <p class="text-justify">
+                    <!-- (see <a href="//arxiv.org/abs/?">paper</a>) -->
+                    Additionally, STEP efficiently adapts to the underlying problem difficulty, ensuring that at all difficulty levels of the underlying comparison (i.e., easy cases with large gaps and hard cases with small gaps) the decision is made with near-optimal expected sample complexity. 
+                    <!-- <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/dppo-real-comparison.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div> -->
+                    <br>
+                    <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            <video id="v0" width="75%" preload="metadata" playsinline muted loop autoplay>
+                                <source src="videos/Adaptation_to_Problem_Difficulty_Trimmed.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
                 <br>
                 <p class="text-justify">
@@ -255,7 +303,7 @@
                         </div>
                     </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="row justify-content-md-center">
             <div class="col-md-12 col-lg-10">
